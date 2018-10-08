@@ -3,34 +3,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<Windows.h>
 #include<stdio.h>
-#if 0
-//暴力搜索算法，时间复杂度为O(N^2),空间复杂度为O(1);用两个循环遍历数组
-void test()
-{
-	int array[4][4] = { { 1, 2, 8, 9 }, 
-				{ 2, 4, 9, 12 }, 
-				{ 4, 7, 10, 13 }, 
-				{ 6, 8, 11, 15 } };
-	int input = 0;
-	printf("Please input the number:");
-	scanf("%d", &input);
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < sizeof(array[0]) / sizeof(array[0][0]); i++)
-	{
-		for (j = 0; j < sizeof(array[0]) / sizeof(array[0][0]); j++)
-		{
-			if (array[i][j] == input)
-			{
-				printf("找到了：");
-				printf("%d 坐标为（%d，%d）", input,i+1,j+1);
-				return;
-			}
-		}
-	}
-	printf("没有找到\n");
-}
-#endif
+
 //这种方法的时间复杂度为O(N)，空间复杂度为O(1)，如果input比array[i][j]小，则在
 //它的左边找，直到找到一个比input小的位置，此时接着在它的下方找。
 
