@@ -33,6 +33,8 @@ void test()
 #endif
 //这种方法的时间复杂度为O(N)，空间复杂度为O(1)，如果input比array[i][j]小，则在
 //它的左边找，直到找到一个比input小的位置，此时接着在它的下方找。
+
+
 void test()
 {
 	int array[4][4] = { { 1, 2, 8, 9 },
